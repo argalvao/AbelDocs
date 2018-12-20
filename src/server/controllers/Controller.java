@@ -110,11 +110,17 @@ public class Controller implements DocumentControllerInterface {
         return false;
     }
 
-    public HashSet<String> getUserDocuments(String user) {
+    public HashSet<String> getUserDocuments(String user) throws RemoteException {
         return this.userDocuments.get(user);
     }
 
-    public HashSet<String> getDocumentUsers(String document) {
+    public HashSet<String> getDocumentUsers(String document) throws RemoteException {
         return documentUsers.get(document);
+    }
+
+    public void registerNewUser(String username) throws RemoteException {
+        if (!this.userDocuments.containsKey(username)) {
+            this.userDocuments.put(username, new HashSet<>());
+        }
     }
 }

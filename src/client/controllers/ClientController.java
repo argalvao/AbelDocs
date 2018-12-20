@@ -96,4 +96,20 @@ public class ClientController {
         }
         return null;
     }
+
+    void registerUser(String name) {
+        try {
+            this.serverController.registerNewUser(name);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
+
+    void write(String text) {
+        try {
+            this.openedDocument.write(text);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
 }

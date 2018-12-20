@@ -12,4 +12,6 @@ public interface DocumentControllerInterface extends Remote {
     boolean createDocument(String documentName, String owner) throws RemoteException;
 
     HashSet<String> getUserDocuments(String user) throws RemoteException;
+
+    void registerNewUser(String username) throws RemoteException;
 }

@@ -11,6 +11,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
+import java.awt.event.KeyEvent;
+
 public class ScreenController {
 
     @FXML
@@ -27,6 +29,9 @@ public class ScreenController {
 
     @FXML
     TextField usernameInput;
+
+    @FXML
+    TextField newUsername;
 
     @FXML
     ComboBox<String> selectDocuments;
@@ -70,9 +75,10 @@ public class ScreenController {
         if (documents != null) {
             //this.selectDocuments.setItems(documents);
             this.loadScreen(event, "/client/Page.fxml", "Docs do Sertão");
+        } else {
+            ScreenController.exibirJanela(AlertType.ERROR, "Docs do Sertão", "Erro!",
+                    "Você não possui cadastro no Sistema");
         }
-        ScreenController.exibirJanela(AlertType.ERROR, "Docs do Sertão", "Erro!",
-                "Você não possui cadastro no Sistema");
     }
 
     @FXML
@@ -95,5 +101,16 @@ public class ScreenController {
     public void homeEvent(ActionEvent event) {
         this.loadScreen(event, "/client/Main.fxml", "Docs do Sertão");
     }
+
+    @FXML
+    public void registerUser(ActionEvent event) {
+        ClientController.getInstance().registerUser(newUsername.getText());
+    }
+
+    /*@FXML
+    public void keyTyped(KeyEvent event){
+        ClientController.getInstance().write(textAreaDocument.getText());
+        System.out.println(textAreaDocument.getText());
+    }*/
 
 }
