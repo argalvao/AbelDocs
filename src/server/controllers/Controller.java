@@ -19,11 +19,10 @@ import java.util.stream.Collectors;
 
 public class Controller implements DocumentControllerInterface {
 
+    private static Controller instance;
     private HashMap<String, HashSet<String>> userDocuments;
     private HashMap<String, HashSet<String>> documentUsers;
     private HashMap<String, Document> openedDocuments;
-
-    private static Controller instance;
 
     private Controller() throws IOException {
         this.userDocuments = new HashMap<>();

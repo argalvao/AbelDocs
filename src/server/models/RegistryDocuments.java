@@ -1,5 +1,7 @@
 package server.models;
 
+import util.DocumentInterface;
+
 import java.rmi.AlreadyBoundException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -8,8 +10,8 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.HashSet;
 
 public class RegistryDocuments {
-    private Registry registry;
     private static RegistryDocuments instance;
+    private Registry registry;
     private int currentPort;
     private HashSet<Integer> usedPorts;
 
@@ -46,7 +48,7 @@ public class RegistryDocuments {
     }
 
     public void bindDocument(Document document) throws RemoteException, AlreadyBoundException {
-        Document stub = (Document) UnicastRemoteObject.exportObject(document, this.getValidPort());
+        DocumentInterface stub = (DocumentInterface) UnicastRemoteObject.exportObject(document, this.getValidPort());
         this.registry.bind(document.path, stub);
     }
 

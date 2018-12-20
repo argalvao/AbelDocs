@@ -5,3 +5,6 @@ AbelDocs.iml
 .project
 .classpath
 *.class
+
+# Ignoring all created files
+*.abelDocs

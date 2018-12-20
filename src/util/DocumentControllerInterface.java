@@ -1,14 +1,15 @@
 package util;
 
-import server.models.Document;
-
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.HashSet;
 
 public interface DocumentControllerInterface extends Remote {
-    public String openDocument(String documentName, String user) throws RemoteException;
+    String openDocument(String documentName, String user) throws RemoteException;
 
-    public void closeDocument(String documentName) throws RemoteException;
+    void closeDocument(String documentName) throws RemoteException;
 
-    public boolean createDocument(String documentName, String owner) throws RemoteException;
+    boolean createDocument(String documentName, String owner) throws RemoteException;
+
+    HashSet<String> getUserDocuments(String user) throws RemoteException;
 }
