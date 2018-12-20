@@ -107,10 +107,9 @@ public class ScreenController {
         ClientController.getInstance().registerUser(newUsername.getText());
     }
 
-    /*@FXML
-    public void keyTyped(KeyEvent event){
+    @FXML
+    public void keyTyped(javafx.scene.input.KeyEvent keyEvent) {
         ClientController.getInstance().write(textAreaDocument.getText());
         System.out.println(textAreaDocument.getText());
-    }*/
-
+    }
 }

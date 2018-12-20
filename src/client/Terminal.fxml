@@ -26,7 +26,7 @@
                 <Image url="@../../img/sertao.png" />
             </image>
         </ImageView>
-        <TextArea fx:id="textAreaDocument" layoutX="26.0" layoutY="136.0" prefHeight="585.0" prefWidth="552.0" wrapText="true" />
+        <TextArea fx:id="textAreaDocument" layoutX="26.0" layoutY="136.0" onKeyTyped="#keyTyped" prefHeight="585.0" prefWidth="552.0" wrapText="true" />
         <Button fx:id="compartilhar" layoutX="470.0" layoutY="740.0" mnemonicParsing="false" text="Compartilhar" />
     </children>
 </AnchorPane>

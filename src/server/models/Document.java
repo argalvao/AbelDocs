@@ -25,6 +25,7 @@ public class Document implements DocumentInterface {
     @Override
     public synchronized void write(String toWrite) throws RemoteException {
         try {
+            System.out.println(toWrite);
             this.bufferedWriter.write(toWrite);
         } catch (IOException e) {
             e.printStackTrace();
