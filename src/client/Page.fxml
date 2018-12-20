@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="client.controllers.TelaController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <ImageView fitHeight="65.0" fitWidth="86.66666666666666" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../img/logo.png" />
+      </image>
+    </ImageView>
+    <ImageView fitHeight="65.0" fitWidth="86.66666666666666" layoutX="310.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../img/sertao.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="106.0" layoutY="34.0" prefHeight="26.0" prefWidth="188.0" text="DOCS DO SERTAO">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Label>
+    <Button id="newDoc" fx:id="newDocument" layoutX="51.0" layoutY="127.0" mnemonicParsing="false" onAction="#terminalEvent" text="Novo" />
+    <ComboBox fx:id="select" layoutX="193.0" layoutY="126.0" prefWidth="170.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label layoutX="150.0" layoutY="129.0" text="Abrir" />
+  </children>
+</AnchorPane>

@@ -1,0 +1,7 @@
+bin/
+.idea/
+.settings/
+AbelDocs.iml
+.project
+.classpath
+*.class

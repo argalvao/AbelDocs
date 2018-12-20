@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="349.1328125" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="client.controllers.TelaController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <ImageView fitHeight="64.0" fitWidth="85.33333333333333" layoutX="15.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../img/sertao.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="115.0" layoutY="28.0" prefHeight="36.0" prefWidth="227.0" text="DOCS DO SERTAO">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Label>
+    <Label layoutX="150.0" layoutY="108.0" text="CADASTRO">
+      <font>
+        <Font size="18.0" />
+      </font>
+    </Label>
+    <TextField layoutX="105.0" layoutY="198.0" prefHeight="36.0" prefWidth="265.0" />
+    <ImageView fitHeight="28.0" fitWidth="37.33333333333333" layoutX="62.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../../img/user.png" />
+      </image>
+    </ImageView>
+    <Label layoutX="105.0" layoutY="182.0" text="Nome" />
+    <Button layoutX="284.0" layoutY="261.0" mnemonicParsing="false" text="Cadastrar" />
+    <Hyperlink fx:id="cadastroTrue" layoutX="136.0" layoutY="306.0" onAction="#homeEvent" text="Ja possuo cadastro" />
+  </children>
+</AnchorPane>
